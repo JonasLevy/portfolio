@@ -5,38 +5,40 @@ export default function About(): JSX.Element | null {
   return (
     <section
       id="about"
-      className="w-full  pt-8 pb-8 pl-32 pr-32 flex flex-col justify-between items-start"
+      className="w-full  pt-8 pb-8 pl-32 pr-32 flex flex-col justify-between items-start max-md:pl-8 max-md:pr-8  max-lg:pl-16 max-lg:pr-16 max-md:justify-center "
     >
-      <div className="flex mb-1">
-        <div className=" flex-1 min-h-72 justify-around">
-          <h2 className="text-3xl font-bold mb-3">Desenvolvedor web</h2>
-          <p className="text-sm mb-1 text-justify text-neutral-800">
-            Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente
-            no 4º semestre pela UniAteneu, com atuação em desenvolvimento web,
-            transitando entre front-end, back-end e automação.
-          </p>
-          <p className="text-sm mb-1 text-justify text-neutral-800">
-            Participei de um bootcamp de Desenvolvimento Web Full Stack, onde
-            adquiri experiência prática com React no front-end e com Node.js,
-            Express e MySQL no back-end, desenvolvendo aplicações completas e
-            compreendendo a integração entre interface, servidor e banco de
-            dados.
-          </p>
-          <p className="text-sm mb-1 text-justify text-neutral-800">
-            Durante a graduação, desenvolvi projetos utilizando Python, com os
-            frameworks FastAPI e Django, aplicando conceitos de APIs REST,
-            organização de código, regras de negócio e persistência de dados.
-            Também adquiri compreensão inicial sobre padrões de projeto (Design
-            Patterns) e metodologias ágeis, aplicando esses conceitos na
-            estruturação do código e no desenvolvimento colaborativo.
-          </p>
-        </div>
-        <div className="rounded-md max-w-lg flex-1 text-center ml-auto flex justify-end ">
-          <img
-            src={imagePerfil}
-            alt="Foto de perfil"
-            className="w-110 h-72 rounded-md object-contain"
-          />
+      <div className="flex mb-1  gap-2 flex-col">
+        <h2 className="text-3xl font-bold ">Desenvolvedor web</h2>
+        <div className="flex  justify-between w-full  max-md:flex-col-reverse max-md:justify-center items-center gap-4">
+          <div className="  flex-1 min-h-72 flex flex-col justify-end">
+            <p className="text-sm mb-2 text-justify text-neutral-800 ">
+              Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente
+              no 4º semestre pela UniAteneu, com atuação em desenvolvimento web,
+              transitando entre front-end, back-end e automação.
+            </p>
+            <p className="text-sm mb-2 text-justify text-neutral-800">
+              Participei de um bootcamp de Desenvolvimento Web Full Stack, onde
+              adquiri experiência prática com React no front-end e com Node.js,
+              Express e MySQL no back-end, desenvolvendo aplicações completas e
+              compreendendo a integração entre interface, servidor e banco de
+              dados.
+            </p>
+            <p className="text-sm mb-2 text-justify text-neutral-800">
+              Durante a graduação, desenvolvi projetos utilizando Python, com os
+              frameworks FastAPI e Django, aplicando conceitos de APIs REST,
+              organização de código, regras de negócio e persistência de dados.
+              Também adquiri compreensão inicial sobre padrões de projeto
+              (Design Patterns) e metodologias ágeis, aplicando esses conceitos
+              na estruturação do código e no desenvolvimento colaborativo.
+            </p>
+          </div>
+          <div className="rounded-md max-w-lg flex-1 text-center flex  justify-end max-md:justify-center ">
+            <img
+              src={imagePerfil}
+              alt="Foto de perfil"
+              className="w-110 h-72 rounded-md object-contain"
+            />
+          </div>
         </div>
       </div>
       <p className="text-sm mb-1 text-justify text-neutral-800">

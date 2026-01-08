@@ -43,7 +43,10 @@ const skillsData: Skill[] = [
 
 export const Skills = () => {
     return (
-      <section id="skills" className="w-full  pt-8 pb-8 pl-32 pr-32 bg-gray-50">
+      <section
+        id="skills"
+        className="w-full  pt-8 pb-8 pl-32 pr-32 bg-gray-50 max-md:pl-8 max-md:pr-8"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 ">Habilidades</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -53,7 +56,7 @@ export const Skills = () => {
                 className="bg-white rounded-lg p-6 shadow"
               >
                 <h3 className="text-xl font-semibold mb-4">
-                  {category.icon} {category.category}
+                  {category.category}
                 </h3>
                 <ul className="space-y-2">
                   {category.skills.map((skill) => (

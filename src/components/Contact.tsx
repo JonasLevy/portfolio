@@ -33,9 +33,12 @@ const Contact: React.FC = () => {
     ];
 
     return (
-      <section id="contact" className="w-full pt-8 pb-8 pl-32 pr-32 bg-gray-50">
+      <section
+        id="contact"
+        className="w-full pt-8 pb-8 pl-32 pr-32 bg-gray-50 max-md:pl-8 max-md:pr-8"
+      >
         <h2 className="text-3xl font-bold mb-8 ">Contato</h2>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {contactInfo.map((contact) => (
             <div
               key={contact.label}
