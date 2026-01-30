@@ -20,9 +20,9 @@ const Contact: React.FC = () => {
       },
       {
         label: "LinkedIn",
-        value: "linkedin.com/in/jonas-levy-meneses",
+        value: "linkedin.com/in/jonaslevydev",
         icon: "💼",
-        url: "https://linkedin.com/in/jonas-levy-meneses",
+        url: "https://linkedin.com/in/jonaslevydev",
       },
       {
         label: "Instagram",
