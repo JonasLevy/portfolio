@@ -1,34 +1,46 @@
-import type { FC } from "react";
+import { type FC, useEffect, useRef, useState } from "react";
 import { projects } from "../data/projects";
 
-export type Project = {
-  id: number;
-  category: "Front-end" | "Back-end" | "Vanilla JS" | "Full Stack";
-  title: string;
-  description: string;
-  role?: string;
-  stack: string[];
-  features: string[];
-  github: string;
-  deploy?: string;
-  image?: string;
-  docs?: string;
-};
-
-
-// projects moved to `src/data/projects.ts`
-
-
 export const Projects: FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="projects" className="w-full pt-8 pb-8 pl-8 pr-8 md:pl-32 md:pr-32 flex flex-col justify-between items-start">
+    <section 
+      ref={sectionRef}
+      id="projects" 
+      className="w-full pt-8 pb-8 pl-8 pr-8 md:pl-32 md:pr-32 flex flex-col justify-between items-start"
+    >
       <h2 className="text-3xl font-bold mb-8">Projects</h2>
 
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <article
             key={project.id}
-            className="bg-white rounded-lg shadow-sm overflow-hidden border border-neutral-200"
+            style={{ 
+              transitionDelay: `${index * 100}ms`,
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
+            }}
+            className="bg-white rounded-xl shadow-sm overflow-hidden border border-neutral-200 transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-md"
           >
             <div className="p-4">
               <div className="mb-2">
@@ -71,17 +83,6 @@ export const Projects: FC = () => {
                     className="inline-block px-3 py-2 bg-blue-600 text-white rounded hover:opacity-90 text-sm"
                   >
                     Demo
-                  </a>
-                )}
-
-                {project.docs && (
-                  <a
-                    href={project.docs}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-3 py-2 bg-neutral-200 text-neutral-800 rounded hover:opacity-90 text-sm"
-                  >
-                    Docs
                   </a>
                 )}
               </div>

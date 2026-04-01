@@ -26,9 +26,9 @@ const Contact: React.FC = () => {
       },
       {
         label: "Instagram",
-        value: "@jonaslevy_m",
+        value: "@jonaslevydev",
         icon: "📸",
-        url: "https://instagram.com/jonaslevy_m",
+        url: "https://instagram.com/jonaslevydev",
       },
     ];
 

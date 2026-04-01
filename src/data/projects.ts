@@ -17,13 +17,14 @@ export const projects: Project[] = [
     category: "Front-end",
     title: "e-Condomínio",
     description:
-      "O e-Condomínio foi desenvolvido como parte de um projeto interdisciplinar acadêmico, com o objetivo de criar uma solução digital acessível e intuitiva para o gerenciamento de condomínios residenciais e comerciais.",
-    role: "Líder e Tech Lead da equipe, além de idealizador do projeto.",
+      "Aplicação web desenvolvida como projeto interdisciplinar com foco na digitalização e organização da gestão condominial.",
+    role: "Líder técnico e idealizador do projeto.",
     stack: ["React", "Vite", "Tailwind CSS", "Material UI"],
     features: [
       "Interface responsiva",
       "Componentização",
       "Consumo de API REST",
+      "Arquitetura organizada por features",
     ],
     github:
       "https://github.com/JonasLevy/projeto-interdisciplinar-certificacao-uniateneu",
@@ -35,12 +36,13 @@ export const projects: Project[] = [
     category: "Back-end",
     title: "API e-Condomínio",
     description:
-      "API REST desenvolvida com FastAPI para atender a aplicação e-Condomínio, sendo responsável pela autenticação, regras de negócio e persistência de dados.",
+      "API REST responsável pela autenticação, regras de negócio e persistência de dados da aplicação e-Condomínio.",
     stack: ["Python", "FastAPI", "MySQL"],
     features: [
-      "Autenticação com JWT (OAuth2)",
-      "APIs REST documentadas",
-      "Regras de negócio",
+      "Autenticação JWT (OAuth2)",
+      "Estrutura RESTful",
+      "Validação de dados",
+      "Documentação automática (Swagger)",
     ],
     github: "https://github.com/JonasLevy/api-eCondominio",
   },
@@ -50,12 +52,13 @@ export const projects: Project[] = [
     category: "Vanilla JS",
     title: "Pizzaria",
     description:
-      "Projeto em desenvolvimento de um site de delivery onde o usuário pode navegar por categorias, adicionar produtos à sacola e visualizar a atualização automática dos valores. O projeto foi iniciado sem frameworks, utilizando JavaScript puro, com a adição de Sass para facilitar a manutenção do CSS.",
+      "Aplicação web de delivery desenvolvida com JavaScript puro, focada em manipulação de DOM e lógica de carrinho de compras.",
     stack: ["HTML", "SCSS (Sass)", "JavaScript"],
     features: [
-      "Manipulação do DOM",
+      "Manipulação avançada de DOM",
       "Lógica de carrinho",
       "Atualização dinâmica de valores",
+      "Organização modular do código",
     ],
     github: "https://github.com/JonasLevy/pizzaria-javaScript-vanilla",
     deploy:
@@ -67,13 +70,86 @@ export const projects: Project[] = [
     category: "Full Stack",
     title: "Sistema de Estoque",
     description:
-      "Sistema simples de controle de estoque desenvolvido com Django, permitindo o gerenciamento de produtos, categorias, fornecedores e o registro de movimentações de entrada e saída.",
+      "Sistema de controle de estoque com autenticação e gerenciamento completo de produtos e movimentações.",
     stack: ["Python", "Django", "SQLite"],
     features: [
       "CRUD completo",
-      "Controle de movimentações",
-      "Organização baseada no padrão MVC do Django",
+      "Controle de entrada e saída",
+      "Admin nativo do Django",
+      "Organização seguindo padrão MTV",
     ],
     github: "https://github.com/JonasLevy/gestao-estoque-django",
+  },
+
+  {
+    id: 5,
+    category: "Front-end",
+    title: "Dra. Carla Fernandes",
+    description:
+      "Website institucional desenvolvido para profissional da área da saúde, com foco em credibilidade, clareza das informações e experiência do usuário.",
+    role: "Desenvolvimento completo do layout e implementação.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Layout responsivo",
+      "Design focado em conversão",
+      "Estrutura semântica",
+      "Otimização básica de SEO",
+    ],
+    github: "",
+    deploy: "https://dracarlafernandes.com.br/",
+  },
+
+  {
+    id: 6,
+    category: "Front-end",
+    title: "Festa Locações",
+    description:
+      "Website institucional desenvolvido no início da minha trajetória como desenvolvedor, criado para atender uma empresa real de locação de artigos para festas.",
+    role: "Responsável por todo o desenvolvimento e publicação do projeto.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Estrutura semântica em HTML",
+      "Layout responsivo",
+      "Organização básica de estilos",
+      "Deploy em hospedagem estática",
+    ],
+    github: "",
+    deploy: "https://festaloc-v1.surge.sh/",
+  },
+
+  {
+    id: 7,
+    category: "Vanilla JS",
+    title: "Projeto Carpa",
+    description:
+      "Experiência visual interativa inspirada no movimento fluido de carpas, unindo direção criativa ao poder da IA e do motor Antigravity.",
+    role: "Idealização, design e desenvolvimento.",
+    stack: ["HTML", "CSS", "JavaScript", "Canvas API"],
+    features: [
+      "Seção Hero 'Zen Tech' de alta performance",
+      "Animações fluidas e orgânicas",
+      "Experiência de usuário imersiva",
+      "Desenvolvido com auxílio de IA (Antigravity)",
+    ],
+    github: "https://github.com/JonasLevy/carpa",
+    deploy: "https://carpa-tawny.vercel.app/",
+  },
+
+  {
+    id: 8,
+    category: "Front-end",
+    title: "MDL Consultoria",
+    description:
+      "Website profissional moderno desenvolvido para empresa de consultoria empresarial.",
+    role: "Desenvolvimento full-cycle (concepção, domínio e hospedagem).",
+    stack: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Design corporativo premium",
+      "Otimização de performance e SEO",
+      "Gestão completa de infraestrutura",
+      "Interface responsiva e profissional",
+    ],
+    github: "",
+    deploy: "https://mdlconsultoria.com.br",
   },
 ];
